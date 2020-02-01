@@ -219,8 +219,16 @@ button:focus,
 
 /* ABOUT ME */
 
-.bio_text {
+.container {
   text-align: center;
+}
+
+.bio_text {
+  display: inline-block;
+  text-align: center;
+  background-color: lightgray;
+  padding: 0px 20px;
+  margin: 20px 20px;
 }
 
 .bio_table {
