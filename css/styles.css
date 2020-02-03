@@ -17,7 +17,7 @@ Grid color 2 #cfd2e3;
 }
 
 :root {
-  --primary-color: #e3e0cf;
+  --primary-color:#e3e0cf;
   --secondary-color: #2C3531;
   --link-active-color: #116466;
   --link-visited-color: #70357b;
@@ -32,7 +32,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  background-color: #e3e0cf;
+background-image: linear-gradient(90deg, rgba(255,255,255,.07) 99%, transparent 99%),
+linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 99%),
+linear-gradient(90deg, transparent 77%, rgba(255,255,255,.17) 99%),
+linear-gradient(90deg, transparent 77%, rgba(255,255,255,.19) 99%);
+background-size: 13px, 29px, 37px, 53px;
 }
 
 h1 {
