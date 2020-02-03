@@ -17,8 +17,8 @@ Grid color 2 #cfd2e3;
 }
 
 :root {
-  --primary-color:#e3e0cf;
-  --secondary-color: #2C3531;
+  --primary-color: #e3e0cf;
+  --secondary-color: #2c3531;
   --link-active-color: #116466;
   --link-visited-color: #70357b;
   --link-hover-color: #e0b354;
@@ -32,13 +32,15 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
+
   /* background-color: var(--primary-color); */
   background-color: #e3e0cf;
-background-image: linear-gradient(90deg, rgba(255,255,255,.07) 99%, transparent 99%),
-linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 99%),
-linear-gradient(90deg, transparent 77%, rgba(255,255,255,.17) 99%),
-linear-gradient(90deg, transparent 77%, rgba(255,255,255,.19) 99%);
-background-size: 13px, 29px, 37px, 53px;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
+    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
+    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
+  background-size: 13px, 29px, 37px, 53px;
 }
 
 h1 {
@@ -55,8 +57,6 @@ h3 {
   font-size: 18px;
   font-weight: var(--font-weight-heading);
 }
-
-
 
 /* Header */
 
@@ -75,8 +75,6 @@ h3 {
   text-align: right;
 }
 
-
-
 /* Navigation section */
 
 a {
@@ -87,7 +85,8 @@ a:visited {
   color: var(--link-visited-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;      /* No underlining when hovering over a link */
 }
 
@@ -99,8 +98,10 @@ a:active {
   text-decoration: none;
 }
 
-.navigation-list__item:hover, .navigation-list__item--active:hover, .code-link:hover {
-  color: var(--link-hover-color);;   /* Changes the color on all links upon hovering */
+.navigation-list__item:hover,
+.navigation-list__item--active:hover,
+.code-link:hover {
+  color: var(--link-hover-color);   /* Changes the color on all links upon hovering */
 }
 
 .navigation-list {
@@ -112,8 +113,6 @@ a:active {
   margin-left: 15px;
 }
 
-
-
 /* Footer */
 
 .page-footer {
@@ -121,16 +120,13 @@ a:active {
   display: flex; /* This is what assigns the flexbox layout */
   flex-direction: column;
   text-align: center;
-
 }
-
-
 
 /* INDEX */
 
 button,
 .button,
-#send-button  {
+#send-button {
   border: none;      /* overwrites browser defaults and resets the border */
   display: inline-block;
   font-family: inherit;      /* takes the font from the outer container */
@@ -182,8 +178,8 @@ button:focus,
   display: inline-block;
   text-align: center;
   background-color: var(--grid-color-one);
-  padding: 0px 20px;
-  margin: 20px 20px;
+  padding: 0 20px;
+  margin: 20px;
 }
 
 .bio_table {
@@ -200,19 +196,18 @@ button:focus,
 /* WORK */
 
 .grid {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
 .grid_item:nth-child(even) {
-   background-color: var(--grid-color-two);
+  background-color: var(--grid-color-two);
 }
 
 .grid_item:nth-child(odd) {
-   background-color: var(--grid-color-one);
+  background-color: var(--grid-color-one);
 }
-
 
 /* CONTACT */
 
@@ -221,15 +216,15 @@ button:focus,
 }
 
 .contact-form {
-width: 100%;
-padding: 12px 20px;
-text-align: center;
-display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  display: inline-block;
 }
 
 textarea {
-display : inline-block;
-border: none;
+  display: inline-block;
+  border: none;
 }
 
 @media all and (max-width: 500px) {
@@ -237,19 +232,23 @@ border: none;
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -265,9 +264,11 @@ border: none;
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -277,6 +278,7 @@ border: none;
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -286,10 +288,12 @@ border: none;
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
