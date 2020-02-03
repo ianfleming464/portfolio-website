@@ -5,7 +5,7 @@ Colors used -
 Text color_black;
 Background color #e3e0cf;
 Link, default button #2C3531;
-Link (active), secondary button #116466; 
+Link (active), secondary button #116466;
 Link (visited) #70357b;
 Link (hover) #e0b354;
 Grid color 1 lightgray
@@ -16,7 +16,7 @@ Grid color 2 #cfd2e3;
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,7 +24,25 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
+
+  /* background-color: var(--primary-color); */
   background-color: #e3e0cf;
+  background-image:
+    -webkit-gradient(linear, left top, right top, color-stop(99%, rgba(255, 255, 255, 0.07)), color-stop(99%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(99%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.17))),
+    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.19)));
+  background-image:
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
+    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
+    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
+    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
+    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
+  background-size: 13px, 29px, 37px, 53px;
 }
 
 h1 {
@@ -42,8 +60,6 @@ h3 {
   font-weight: 700;
 }
 
-
-
 /* Header */
 
 .page-header {
@@ -56,30 +72,29 @@ h3 {
 
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
-
-
 
 /* Navigation section */
 
 a {
-  color: #2C3531;   /* general color of the links */
+  color: #2c3531;   /* general color of the links */
 }
 
 a:visited {
   color: #70357b;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;      /* No underlining when hovering over a link */
 }
 
@@ -92,15 +107,15 @@ a:active {
 }
 
 .navigation-list__item:hover {
-  color: #e0b354;;   /* Changes the color on all links upon hovering */
+  color: #e0b354;   /* Changes the color on all links upon hovering */
 }
 
 .navigation-list__item--active:hover {
-  color: #e0b354;;   /* Changes the color on all links upon hovering */
+  color: #e0b354;   /* Changes the color on all links upon hovering */
 }
 
 .code-link:hover {
-  color: #e0b354;;   /* Changes the color on all links upon hovering */
+  color: #e0b354;   /* Changes the color on all links upon hovering */
 }
 
 .navigation-list {
@@ -112,8 +127,6 @@ a:active {
   margin-left: 15px;
 }
 
-
-
 /* Footer */
 
 .page-footer {
@@ -123,17 +136,14 @@ a:active {
   display: flex; /* This is what assigns the flexbox layout */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
-
 }
-
-
 
 /* INDEX */
 
-button  {
+button {
   border: none;      /* overwrites browser defaults and resets the border */
   display: inline-block;
   font-family: inherit;      /* takes the font from the outer container */
@@ -143,14 +153,14 @@ button  {
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
 }
 
-.button  {
+.button {
   border: none;      /* overwrites browser defaults and resets the border */
   display: inline-block;
   font-family: inherit;      /* takes the font from the outer container */
@@ -160,14 +170,14 @@ button  {
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
 }
 
-#send-button  {
+#send-button {
   border: none;      /* overwrites browser defaults and resets the border */
   display: inline-block;
   font-family: inherit;      /* takes the font from the outer container */
@@ -177,8 +187,8 @@ button  {
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
@@ -192,8 +202,8 @@ button:focus,
 .button:focus {
   cursor: pointer;    /* lets the mouse appear as a hand when hovering over the button */
   -webkit-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
@@ -227,8 +237,8 @@ button:focus,
   display: inline-block;
   text-align: center;
   background-color: lightgray;
-  padding: 0px 20px;
-  margin: 20px 20px;
+  padding: 0 20px;
+  margin: 20px;
 }
 
 .bio_table {
@@ -245,21 +255,20 @@ button:focus,
 /* WORK */
 
 .grid {
-  display:-ms-grid;
-  display:grid;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
 .grid_item:nth-child(even) {
-   background-color: #cfd2e3;
+  background-color: #cfd2e3;
 }
 
 .grid_item:nth-child(odd) {
-   background-color: lightgray;
+  background-color: lightgray;
 }
-
 
 /* CONTACT */
 
@@ -268,15 +277,15 @@ button:focus,
 }
 
 .contact-form {
-width: 100%;
-padding: 12px 20px;
-text-align: center;
-display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: center;
+  display: inline-block;
 }
 
 textarea {
-display : inline-block;
-border: none;
+  display: inline-block;
+  border: none;
 }
 
 @media all and (max-width: 500px) {
@@ -285,20 +294,24 @@ border: none;
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -314,9 +327,11 @@ border: none;
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -326,9 +341,11 @@ border: none;
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -337,57 +354,62 @@ border: none;
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
+
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
