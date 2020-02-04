@@ -75,6 +75,10 @@ h3 {
   text-align: right;
 }
 
+.page-header__logo {
+  max-width: 250px;
+}
+
 /* Navigation section */
 
 a {
@@ -164,6 +168,7 @@ button:focus,
 }
 
 .profile {
+  display: flex;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -231,6 +236,10 @@ textarea {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+.page-header__logo {
+  width: 60%;
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
