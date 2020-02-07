@@ -77,6 +77,9 @@ h3 {
 
 .page-header__logo {
   max-width: 250px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation section */
@@ -184,11 +187,37 @@ button:focus,
   background-color: var(--grid-color-one);
   padding: 0 20px;
   margin: 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  border-collapse: collapse;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+tr:nth-child(even) {
+  background-color: var(--grid-color-one);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--grid-color-two);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .bio_table {
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid black;
 }
 
 .button {
@@ -199,6 +228,11 @@ button:focus,
 
 /* WORK */
 
+.mainContent {
+  padding-left: 1.5%;
+  padding-right: 1em;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -207,10 +241,18 @@ button:focus,
 
 .grid_item:nth-child(even) {
   background-color: var(--grid-color-two);
+  padding: 5px 5px 10px 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .grid_item:nth-child(odd) {
   background-color: var(--grid-color-one);
+  padding: 5px 5px 10px 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 /* CONTACT */
@@ -224,11 +266,25 @@ button:focus,
   padding: 12px 20px;
   text-align: center;
   display: inline-block;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+input[type=email] {
+  border: none;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 textarea {
   display: inline-block;
   border: none;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  resize: none;
 }
 
 @media all and (max-width: 500px) {
