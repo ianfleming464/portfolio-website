@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /*
 Colors used -
 Text color_black;
@@ -13,6 +15,7 @@ Grid color 2 #cfd2e3;
 /* GENERAL */
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -24,6 +27,16 @@ body {
 
   /* background-color: var(--primary-color); */
   background-color: #e3e0cf;
+  background-image:
+    -webkit-gradient(linear, left top, right top, color-stop(99%, rgba(255, 255, 255, 0.07)), color-stop(99%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(99%, transparent)),
+    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.17))),
+    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.19)));
+  background-image:
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
+    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
+    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
   background-image:
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
     linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
@@ -50,22 +63,30 @@ h3 {
 /* Header */
 
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
 }
 
 .page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
 }
 
 .page-header__logo {
   max-width: 250px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation section */
@@ -116,7 +137,12 @@ a:active {
 
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; /* This is what assigns the flexbox layout */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
 }
@@ -132,7 +158,11 @@ button {
   padding: 10px;
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -145,7 +175,11 @@ button {
   padding: 10px;
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -158,7 +192,11 @@ button {
   padding: 10px;
   border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -169,7 +207,11 @@ button:focus,
 .button:hover,        /* actually on ABOUT ME page but used here to add to other button rules */
 .button:focus {
   cursor: pointer;    /* lets the mouse appear as a hand when hovering over the button */
+  -webkit-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
   opacity: 0.8;      /* reduces the opacity of the button to 80% */
 }
@@ -203,11 +245,35 @@ button:focus,
   background-color: lightgray;
   padding: 0 20px;
   margin: 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  border-collapse: collapse;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+tr:nth-child(odd) {
+  background-color: #cfd2e3;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .bio_table {
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid black;
 }
 
 .button {
@@ -218,18 +284,31 @@ button:focus,
 
 /* WORK */
 
+.mainContent {
+  padding-left: 1.5%;
+  padding-right: 1em;
+}
+
 .grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
 .grid_item:nth-child(even) {
   background-color: #cfd2e3;
+  padding: 5px 5px 10px 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .grid_item:nth-child(odd) {
   background-color: lightgray;
+  padding: 5px 5px 10px 20px;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 /* CONTACT */
@@ -243,15 +322,27 @@ button:focus,
   padding: 12px 20px;
   text-align: center;
   display: inline-block;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+input[type=email] {
+  border: none;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 textarea {
   display: inline-block;
   border: none;
+  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  resize: none;
 }
 
 @media all and (max-width: 500px) {
   .grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
@@ -262,6 +353,7 @@ textarea {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -287,6 +379,20 @@ textarea {
   margin-right: auto;
 }
 
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -301,34 +407,65 @@ textarea {
   }
 }
 
-@keyframes cloud-move {
+@-webkit-keyframes cloud-move {
   from {
+    -webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
   }
 
   to {
+    -webkit-transform: translate(200px, 50px);
     transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
+    -webkit-transform: translate(446px, 48px);
     transform: translate(446px, 48px);
   }
 
   to {
+    -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
   }
 }
 
 .sun {
+  -webkit-animation: 4s color-change infinite alternate linear;
   animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
   animation: 30s cloud-move infinite alternate linear;
 }
 
 .cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
