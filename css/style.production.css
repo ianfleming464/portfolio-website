@@ -3,7 +3,7 @@
 /*
 Colors used -
 Text color_black;
-Background color #e3e0cf;
+Background color #ddf2fc;
 Link, default button #2C3531;
 Link (active), secondary button #116466;
 Link (visited) #70357b;
@@ -20,46 +20,33 @@ Grid color 2 #cfd2e3;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
 
-  /* background-color: var(--primary-color); */
-  background-color: #e3e0cf;
-  background-image:
-    -webkit-gradient(linear, left top, right top, color-stop(99%, rgba(255, 255, 255, 0.07)), color-stop(99%, transparent)),
-    -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.13)), color-stop(99%, transparent)),
-    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.17))),
-    -webkit-gradient(linear, left top, right top, color-stop(77%, transparent), color-stop(99%, rgba(255, 255, 255, 0.19)));
-  background-image:
-    -o-linear-gradient(left, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
-    -o-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
-    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
-    -o-linear-gradient(left, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 99%, transparent 99%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 99%),
-    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.17) 99%),
-    linear-gradient(90deg, transparent 77%, rgba(255, 255, 255, 0.19) 99%);
-  background-size: 13px, 29px, 37px, 53px;
+  background-color: #ddf2fc;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%239C92AC' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
 }
 
+.social-media {
+  padding-right: 30px;
+}
 /* Header */
 
 .page-header {
@@ -85,14 +72,14 @@ h3 {
 
 .page-header__logo {
   max-width: 250px;
-  -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
-  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  /* -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5); */
 }
 
 /* Navigation section */
 
 a {
-  color: #2c3531;   /* general color of the links */
+  color: #2c3531; /* general color of the links */
 }
 
 a:visited {
@@ -101,7 +88,7 @@ a:visited {
 
 a:hover,
 a:focus {
-  text-decoration: none;      /* No underlining when hovering over a link */
+  text-decoration: none; /* No underlining when hovering over a link */
 }
 
 a:active {
@@ -113,19 +100,21 @@ a:active {
 }
 
 .navigation-list__item:hover {
-  color: #e0b354;   /* Changes the color on all links upon hovering */
+  color: #e0b354; /* Changes the color on all links upon hovering */
 }
 
 .navigation-list__item--active:hover {
-  color: #e0b354;   /* Changes the color on all links upon hovering */
+  color: #e0b354; /* Changes the color on all links upon hovering */
 }
 
 .code-link:hover {
-  color: #e0b354;   /* Changes the color on all links upon hovering */
+  color: #e0b354; /* Changes the color on all links upon hovering */
 }
 
 .navigation-list {
   list-style-type: none; /* Gets rid of the dots in the list items */
+  padding-top: 20px;
+  padding-right: 10px;
 }
 
 .navigation-list li {
@@ -147,16 +136,19 @@ a:active {
   text-align: center;
 }
 
+p {
+  padding-left: 12px;
+}
 /* INDEX */
 
 button {
-  border: none;      /* overwrites browser defaults and resets the border */
+  border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit;      /* takes the font from the outer container */
+  font-family: inherit; /* takes the font from the outer container */
   background-color: #cfd2e3; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-radius: 3px; /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
@@ -167,13 +159,13 @@ button {
 }
 
 .button {
-  border: none;      /* overwrites browser defaults and resets the border */
+  border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit;      /* takes the font from the outer container */
+  font-family: inherit; /* takes the font from the outer container */
   background-color: #cfd2e3; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-radius: 3px; /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
@@ -184,13 +176,13 @@ button {
 }
 
 #send-button {
-  border: none;      /* overwrites browser defaults and resets the border */
+  border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit;      /* takes the font from the outer container */
+  font-family: inherit; /* takes the font from the outer container */
   background-color: #cfd2e3; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;      /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-radius: 3px; /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
@@ -206,14 +198,14 @@ button:focus,
 #send-button:focus,
 .button:hover,        /* actually on ABOUT ME page but used here to add to other button rules */
 .button:focus {
-  cursor: pointer;    /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer; /* lets the mouse appear as a hand when hovering over the button */
   -webkit-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
   transition-duration: 0.8s;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  opacity: 0.8;      /* reduces the opacity of the button to 80% */
+  opacity: 0.8; /* reduces the opacity of the button to 80% */
 }
 
 .button__secondary {
@@ -221,7 +213,8 @@ button:focus,
   color: white;
 }
 
-.profile__portrait {    /* Profile picture edits */
+.profile__portrait {
+  /* Profile picture edits */
   float: left;
   width: 250px;
   margin-right: 40px;
@@ -326,7 +319,7 @@ td {
   box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
-input[type=email] {
+input[type="email"] {
   border: none;
   -webkit-box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
   box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
